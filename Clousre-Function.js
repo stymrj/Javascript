@@ -44,3 +44,20 @@ obj[input]();
   1. Not able to directly access the variables 
   2. Even our function is not directly accessible its only using the object.
 /*
+
+/* examle -2
+
+
+function adder(){
+let count =0
+function counter(){
+    count++
+    return count;
+}
+    return counter;
+}
+
+var add = adder();
+add(); >> 1
+add(); >> 2
+*/
