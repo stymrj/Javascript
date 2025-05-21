@@ -42,3 +42,48 @@ products.reduce((min,product)=>{
     }
     return min
 },Number.MAX_SAFE_INTEGER)
+
+
+// price formatting
+
+var arr2 = products.map(product=>product); //copy to huwa but same reference ka copy dega
+
+/*
+: 
+{id: 101, name: 'puma', price: 2000} 
+{id: 102, name: 'addidas', price: 3000}
+{id: 103, name: 'khadims', price: 1250}
+*/
+arr2[0] == products[0]  // true -- qki same hai rferenece hai
+arr2[0] == products[0]
+true 
+
+var arr3 = products.map(product=>({...product})) // ab Deep Copy bana rhe hai yaha 
+
+arr3[2]
+{id: 103, name: 'khadims', price: 1200}
+arr2[2];
+{id: 103, name: 'khadims', price: 1200}
+
+arr2[2] == arr3[2]
+false // hence proved referencaces are not more same
+
+// formatted price now
+var arr3 = products.map(product=>({...product, price: product.price.toLocaleString('hi')}))
+
+arr3;
+/*
+(3) [{…}, {…}, {…}]
+{id: 101, name: 'puma', price: '2,000'}
+{id: 102, name: 'addidas', price: '3,000'}
+{id: 103, name: 'khadims', price: '1,200'}
+*/
+
+
+// Sorting Based 
+
+var arr = [10,20,45,5,13,87,9]
+
+arr.sort((a,b)=>a-b); //ascending 
+
+var arr2 = arr.sort((a,b)=>b-a); //descending
