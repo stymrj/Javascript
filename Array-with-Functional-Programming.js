@@ -87,3 +87,6 @@ var arr = [10,20,45,5,13,87,9]
 arr.sort((a,b)=>a-b); //ascending 
 
 var arr2 = arr.sort((a,b)=>b-a); //descending
+
+products.sort((a,b) = > a.price-b.price)) //sorting in objects -- ascending
+products.sort((a,b) = > b.price-a.price)) //sorting in objects -- ascending
