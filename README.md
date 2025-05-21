@@ -1,2 +1,4 @@
 # Javascript
-Javascript Basics Revision
+### Javascript Basics Revision
+- Closure Function 
+- Array with basic & functional methods 
